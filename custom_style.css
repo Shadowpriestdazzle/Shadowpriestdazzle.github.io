@@ -1,0 +1,126 @@
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background-color: #101010;
+  color: white;
+}
+
+.bg-dark {
+  background-color: #242424 !important;
+}
+
+.row {
+  padding-top: 56px;
+}
+
+.navbar-brand {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #155724;
+  transition: background-color .2s ease-in-out;
+}
+
+a.nav-item.nav-link {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.navbar-collapse.collapse.show, .navbar-collapse.collapsing {
+  margin-top: 10px;
+}
+
+.navbar-brand, .nav-item {
+  transition: background-color .2s ease-in-out
+}
+
+.nav-pills .nav-link.active {
+  background-color: #155724;
+  transition: background-color .2s ease-in-out;
+}
+
+.navbar-brand:hover, .nav-item:hover {
+  background-color: #ff6f00;
+  transition: background-color .2s ease-in-out;
+}
+
+.form-check:nth-child(even), .categoryContainer, h4.mb-2.rounded, h2.p-2.rounded {
+  background-color: #155724;
+}
+
+.form-check:nth-child(odd), .subcategoryContainer1, .subcategoryContainer2, .subcategoryContainer3, .subcategoryContainer4, .subcategoryContainer5, .subcategoryContainer6, .subcategoryContainer7, p.p-2.rounded, h2 {
+  background-color: #252525
+}
+
+.form-check:hover, .form-check label:hover {
+  background-color: #ff6f00;
+  cursor: pointer;
+}
+
+.col-sm-12 {
+  padding-left: 10%;
+  padding-right: 5%;
+}
+
+legend {
+  font-size: 1.0rem;
+}
+
+form {
+  margin-top: 50px;
+}
+
+div h3 {
+  margin-bottom: 30px;
+}
+
+.col-form-label, h2, h3 {
+  font-weight: bold;
+}
+
+.form-check-input {
+  opacity: 0;
+}
+
+.custom-radio-button {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: -30px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.form-check:hover input~.custom-radio-button {
+  background-color: #ff6f00;
+  cursor: pointer;
+}
+
+.form-check input:checked~.custom-radio-button {
+  background-color: #165725;
+}
+
+.custom-radio-button:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.form-check input:checked~.custom-radio-button:after {
+  display: block;
+}
+
+.form-check .custom-radio-button:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}

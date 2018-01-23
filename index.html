@@ -1,6 +1,668 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1> Scho no geil, oder ?</h1>
-<p>wäge Style und kein Geld</p>
+<html lang="de">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="custom_style.css">
+  <meta charset="utf-8">
+  <title>WastePrint</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <meta name="description" content="Hilestellung zu Foodwasteverhalten durch interaktive Webanwendung zur Analyse">
+  <meta name="keywords" content="Foodwaste, Fussabdruck, Selbsttest, Essensverbrauch, NKSA">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="56">
+  <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <a class="navbar-brand rounded" href="#">
+      <img src="Foodwaste_Logo.svg" width="30" height="30" class="d-inline-block align-top">
+    WastePrint
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav nav-pills">
+        <a class="nav-item nav-link" href="#section1">Einleitung</a>
+        <a class="nav-item nav-link" href="#section2">Fragebogen</a>
+        <a class="nav-item nav-link" href="#section3">Auswertung</a>
+      </div>
+    </div>
+  </nav>
+  <div id="section1" class="container-fluid">
+    <div class="row mt-2">
+      <div class="col-sm-12 pl-4 pr-4">
+        <h2 class="p-2 rounded">WastePrint</h2>
+      </div>
+      <div class="col-sm-12 pl-4 pr-4">
+        <p class="p-2 rounded mt-2">Während auf der Welt mit Phänomenen des Klimawandels wie z.B. Desertifikation, Überschwemmungen oder Ermüdung der Böden der Kampf um Nahrung in vollem Gange ist, landen viel zu viele Lebensmittel in der Schweiz im Müll. Dieses Geschehen wird allgemein
+          als Lebensmittelverschwendung oder Foodwaste bezeichnet. Aber Sie haben die Möglichkeit dem entgegen zu wirken.</p>
+        <p class="p-2 rounded">Auf WastePrint.ch können Sie durch einen Fragebogen einen kleinen Einblick in ihr persöhnliche Foodwaste-Verhalten bekommen und erhalten Vorschläge wie Sie dieses auch verbessern können. Die Vorschläge werden nach Relevanz sortiert, so dass Sie
+          sofort das Wichtigste zuoberst haben. Probieren Sie es aus.</p>
+        <p class="p-2 rounded">Diese Seite ist im Rahmen einer Projektarbeit der neuen Kantonsschule Aaarau entstanden.</p>
+      </div>
+    </div>
+  </div>
+  <div id="section2" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 pl-4 pr-4">
+        <h2 class="p-2 rounded">Fragebogen</h2>
+      </div>
+      <div class="col-sm-12">
+        <form data-section="1">
+          <div class="form-row">
+            <div class="col-sm-12">
+              <h3>Einkauf:</h3>
+            </div>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Wo gehen Sie einkaufen?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Hofladen, direkt vom Bauer.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="3">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Dorfladen (z.B. Volg, Chäsi, etc).
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="6">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Grossverteiler.
+              </label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Wie oft kaufen Sie wegen Aktionen/Rabatten mehr als Sie gerade brauchen?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Nie.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="2">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Manchmal.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="4">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Bei jedem Einkauf.
+              </label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Kaufen/Essen Sie Früchte/Gemüse welches optisch nicht einwandfrei aussieht?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="3" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ja, immer.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="3" data-value="3">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Manchmal.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="3" data-value="6">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Nein, nie.
+              </label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Kaufen Sie viel Bio-Produkte?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="4" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ja, ich schaue auf den Einkauf von Bio Produkten.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="4" data-value="1">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Manchmal kaufe ich Bio.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="4" data-value="2">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Nein, ich kaufe nie Bio.
+              </label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Wie oft gehen Sie einkaufen pro Woche?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="5" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Alle ein bis zwei Tage.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="5" data-value="2">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Alle drei bis vier Tage.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="5" data-value="4">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Alle fünf Tage oder weniger.
+              </label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Planen Sie Ihre Einkäufe z.B. mit einer Liste oder gehen sie nach Gefühl vor?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="6" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich kaufe immer mit einer Einkaufsliste ein.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="6" data-value="2">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich plane nur grosse Einkäufe und bin sonst eher spontan.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="6" data-value="4">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich plane meine Einkäufe nie und verlasse mich auf mein Gefühl.
+              </label>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+        <form data-section="2">
+          <div class="form-row">
+            <div class="col-sm-12">
+              <h3>Essensreste:</h3>
+            </div>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Wie oft pro Woche kochen Sie mehr als gegessen wird?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Höchstens einmal pro Woche.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="3">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Zwei bis fünf mal.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="6">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Mehr als fünf mal.
+              </label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Wie oft entsorgen Sie Essensreste im Abfall?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Höchstens einmal pro Woche.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="3">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Zwei bis fünf mal.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="6">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Mehr als fünf mal.
+              </label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Was fangen Sie normalerweise mit den Essensresten an?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="3" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich bewahre die Reste auf und esse sie später.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="3" data-value="3">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Das kommt stark auf den Rest drauf an.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="3" data-value="6">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich entsorge die Reste direkt im Abfall.
+              </label>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+        <form data-section="3">
+          <div class="form-row">
+            <div class="col-sm-12">
+              <h3>Früchte und Gemüse:</h3>
+            </div>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Wie rüsten Sie ihr Gemüse?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich schäle und schneide nur weg, was ungeniessbar ist.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="1">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich schäle und schneide alles weg, was nicht ansprechend aussieht.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="2">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich entferne generell Schalen und Verformungen.
+              </label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Werfen Sie angefaultes oder beschädigtes Gemüse oder Früchte als Ganzes fort?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich entsorge nur beschädigte oder angefaulte Teile.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="2">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Das kommt auf die Schwere der Beschädigung an.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="4">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich werfe generell das ganze Gewächs weg.
+              </label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Werfen Sie gekeimte Kartoffeln weg oder verwenden Sie sie weiter?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="3" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich versuche die Keimlinge zu entfernen und die Kartoffel zu verwenden.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="3" data-value="2">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich schäle mal grosszügig und schaue ob sich die Kartoffel noch lohnt.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="3" data-value="4">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich entsorge gekeimte Kartoffeln grundsätzlich.
+              </label>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+        <form data-section="4">
+          <div class="form-row">
+            <div class="col-sm-12">
+              <h3>Restaurant:</h3>
+            </div>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Wie oft pro Woche essen Sie in einem Restaurant oder einer Mensa etc.?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Mehr als fünf Mal.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="2">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Drei bis fünf Mal.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="4">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Weniger als drei Mal.
+              </label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Schaffen Sie ihre Portionen, wenn Sie auswärts essen?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Eigentlich immer.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="3">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Meistens.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="6">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Praktisch nie.
+              </label>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+        <form data-section="5">
+          <div class="form-row">
+            <div class="col-sm-12">
+              <h3>Milchprodukte:</h3>
+            </div>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Wie viele Milchprodukte werfen Sie pro Woche weg?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Keine.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="3">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Etwa in der Grössenordnung eines Joghurts (~180g).
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="6">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Bedeutend mehr.
+              </label>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+        <form data-section="6">
+          <div class="form-row">
+            <div class="col-sm-12">
+              <h3>Brot:</h3>
+            </div>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Wie viel Brot werfen Sie pro Woche weg?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Praktisch nichts.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="3">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ungefähr einen halben Laib Brot.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="6">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Bedeutend mehr.
+              </label>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+        <form data-section="7">
+          <div class="form-row">
+            <div class="col-sm-12">
+              <h3>Diverses:</h3>
+            </div>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Kaufen sie Zucker aus Zuckerrüben (lokal produziert) oder aus Zuckerrohr (Import)?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich kaufe überwiegend Rohrzucker.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="2">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Das ist bei mir unterschiedlich.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="1" data-value="4">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich kaufe überwiegend Schweizer Zucker aus Zuckerrüben.
+              </label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group col-sm-12">
+              <legend class="col-form-label pt-0">Werfen Sie Lebensmittel strikt nach verstrichenem Ablaufdatum fort ?</legend>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="0">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich sehe mir das Lebensmittel genau an und werfe es nur weg, wenn es nicht mehr essbar ist.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="3">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Es kommt auf die Art von Lebensmittel an.
+              </label>
+              </div>
+              <div class="form-check rounded">
+                <input class="form-check-input" type="radio" name="2" data-value="6">
+                <span class="custom-radio-button"></span>
+                <label class="form-check-label">
+                Ich werfe Lebensmittel generell nach verstrichenem Ablaufdatum fort.
+              </label>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="section3" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 pl-4 pr-4">
+        <h2 class="p-2 rounded">Vorschläge</h2>
+      </div>
+      <div class="col-sm-12 p-3">
+        <div class="d-flex flex-column">
+          <div class="categoryContainer d-flex flex-column p-2 mb-2 rounded order-1">
+            <h3>Einkauf:</h3>
+            <div class="subcategoryContainer1 p-2 mb-2 rounded order-1">
+              <h4 class="p-2 mb-2 rounded">Kaufen Sie lokal ein</h4>
+              <p class="p-2">Versuchen Sie möglichst direkt beim Produzenten Einkaufen, dadurch sparen Sie viel Geld. Bei den Zwischenhändlern und Verkäufer gehen 20% der Nahrungsmittel verloren. Erkundigen Sie sich nach einem Nahegelegenen Hofladen oder fragen Sie
+                den nächsten Bauern, ob Sie bei ihm Frischprodukte kaufen können. Die Bauern freuen sich über Direktkäufer, sie können nicht einwandfrei aussehende Produkte dadurch immer noch zu einem angemessenen Preis verkaufen.</p>
+            </div>
+            <div class="subcategoryContainer1 p-2 mb-2 rounded order-2">
+              <h4 class="p-2 mb-2 rounded">Halten Sie sich an eine Einkaufsliste</h4>
+              <p class="p-2">Rabatte und Aktionen (wie "nimm 3 und zahle 2"), verleiten Sie dazu mehr zu kaufen, als Sie brauchen. Dadurch werfen Sie tendenziell mehr weg, da Sie entweder nicht mit der Menge zurechtkommen oder Sie das gekaufte nach ein paar Tagen nicht
+                mehr sehen können. Ausserdem haben Sie nicht "so viel" gespart, sondern "so viel" ausgegeben.</p>
+            </div>
+            <div class="subcategoryContainer1 p-2 mb-2 rounded order-3">
+              <h4 class="p-2 mb-2 rounded">Krumme Gurken</h4>
+              <p class="p-2">Gemüse das nicht perfekt aussieht, ist mindestens genau so gut. Krumme Gurken vom Bauer oder vom Markt schmecken wahrscheinlich noch besser als die gerade gezüchteten vom Grossverteiler.</p>
+            </div>
+            <div class="subcategoryContainer1 p-2 mb-2 rounded order-4">
+              <h4 class="p-2 mb-2 rounded">Bio</h4>
+              <p class="p-2">Bio ist zwar nicht besser als die anderen Produkte, aber mit dem Einkauf von Bio Produkten unterstützen sie neue Technologien und Methoden um unter anderem Foodwaste zu verringern.</p>
+            </div>
+            <div class="subcategoryContainer1 p-2 mb-2 rounded order-5">
+              <h4 class="p-2 mb-2 rounded">Kaufen Sie oft ein</h4>
+              <p class="p-2">Mehrmals pro Woche einkaufen ist besser, da man so den Einkauf besser abschätzen kann und nur das kauft, was man wirklich braucht. Da Frischprodukte nicht sehr lange haltbar sind, macht es Sinn, öfters kleinere Mengen einzukaufen, als selten
+                grosse Mengen.</p>
+            </div>
+            <div class="subcategoryContainer1 p-2 mb-2 rounded order-6">
+              <h4 class="p-2 mb-2 rounded">Einkaufslisten</h4>
+              <p class="p-2">Machen Sie wenn möglich immer eine Einkaufsliste und versuchen Sie sich strikt daran zu halten. Wenn Sie zum Beispiel Hunger haben, werden Sie mehr einkaufen als wenn Sie mit vollem Magen unterwegs sind. Am besten schreiben Sie die Einkaufsliste
+                fortlaufend. Wenn Ihnen etwas ausgeht, schreiben Sie es direkt auf.</p>
+            </div>
+          </div>
+          <div class="categoryContainer d-flex flex-column p-2 mb-2 rounded order-2">
+            <h3>Essensreste:</h3>
+            <div class="subcategoryContainer2 p-2 mb-2 rounded order-1">
+              <h4 class="p-2 mb-2 rounded">Die richtige Menge kochen</h4>
+              <p class="p-2">Schauen Sie im Internet oder in einem Kochbuch nach, wie viel man pro Person braucht. Kochen sie die vorgegebene Menge und passen sie dann Individuell an. Falls Sie mehr brauchen um satt zu werden, dann kochen sie mehr. Tasten Sie sich von
+                unten an die richtige Menge heran.</p>
+            </div>
+            <div class="subcategoryContainer2 p-2 mb-2 rounded order-2">
+              <h4 class="p-2 mb-2 rounded">Reste aufbewahren und wiederverwerten</h4>
+              <p class="p-2">Reste können gut in einem Behälter im Kühlschrank aufbewahrt und einige Tage später aufgewärmt und gegessen werden. Schauen Sie die Reste dann noch einmal genau an und riechen sie daran, um zu überprüfen, dass sie noch einwandfrei sind.</p>
+            </div>
+            <div class="subcategoryContainer2 p-2 mb-2 rounded order-3">
+              <h4 class="p-2 mb-2 rounded">Probieren Sie neue Kochideen aus</h4>
+              <p class="p-2">Es gibt viele Möglichkeiten Reste interessanter zu machen. Zum Beispiel kann man gekochte Nudeln anbraten oder Reis mit Ei mischen und dann anbraten. Verkochen Sie nach eigenen Gelüsten oder googeln Sie neue Rezeptideen. Ihr Geschmack ist
+                die einzige Grenze.</p>
+            </div>
+          </div>
+          <div class="categoryContainer d-flex flex-column p-2 mb-2 rounded order-3">
+            <h3>Früchte und Gemüse:</h3>
+            <div class="subcategoryContainer3 p-2 mb-2 rounded order-1">
+              <h4 class="p-2 mb-2 rounded">Schale kann oft gegessen werden</h4>
+              <p class="p-2">Oftmals können nach dem Reinigen die Schalen auch gegessen werden. Die Schale ist bei den meisten Früchten essbar und oftmals sehr gesund. Wenn sie nicht sicher sind, googeln Sie einfach die Sorte.</p>
+            </div>
+            <div class="subcategoryContainer3 p-2 mb-2 rounded order-2">
+              <h4 class="p-2 mb-2 rounded">Früchte und Gemüse</h4>
+              <p class="p-2">Auch Gemüse und Früchte welche nicht sehr schön aussehen, haben meistens einen einwandfreien Geschmack. Sehr reife Exemplare, die vielleicht nicht mehr perfekt aussehen, sind sehr süss und schmecken meistens sogar besser. Schneiden Sie den
+                Teil raus, der nicht mehr gut ist.<br>Früchte werden oft noch unreif verkauft. Gelbe Bananen sind zum Beispiel erst reif und süss, wenn sie braune Flecken auf der Schale haben. Bei Früchten und Gemüse ist die Lagerung das Wichtigste. Wenn
+                Sie wollen, dass ihre Früchte nicht allzu schnell reifen, bewahren Sie sie im Kühlschrank oder im Keller auf. Passen Sie aber auf, dass die Stücke im Kühlschrank nicht gefrieren. Dadurch werden sie oft faul und ungeniessbar</p>
+            </div>
+            <div class="subcategoryContainer3 p-2 mb-2 rounded order-3">
+              <h4 class="p-2 mb-2 rounded">Kartoffeln</h4>
+              <p class="p-2">Gekeimte Kartoffeln sind noch essbar, sofern sie sich innen noch nicht grün verfärbt haben. Die Keimlinge deuten aber auf eine falsche Lagerung hin. Kartoffeln sollten nämlich bei zwischen 4°C und 14°C kühl und im Dunkeln gelagert werden.
+                Ein Keller bietet also die perfekte Umgebung. Auch sollte man Kartoffeln aus den Plastikbeuteln herausnehmen. Die Kartoffel ist eines der besten Beispiele für Foodwaste, weil bei der Ernte wird schon ein grosser Teil nicht aufgelesen wird,
+                da die Grossverteiler bei Kartoffeln sehr wählerisch sind. Man kann desswegen bei den Bauern qualitativ hochwertige Kartoffeln zu niedrigen Preisen kaufen.</p>
+            </div>
+          </div>
+          <div class="categoryContainer d-flex flex-column p-2 mb-2 rounded order-4">
+            <h3>Restaurant:</h3>
+            <div class="subcategoryContainer4 p-2 mb-2 rounded order-1">
+              <h4 class="p-2 mb-2 rounded">Foodwaste im Restaurant</h4>
+              <p class="p-2">Das kommt jetzt vielleicht unerwartet, aber Restaurants und andere Gastrobetriebe produzieren weitaus weniger Foodwaste als Privatpersonen. Es liegt wahrscheinlich daran, dass sie ihre Menus im Voraus planen und so genau wissen, was sie
+                einkaufen müssen.</p>
+            </div>
+            <div class="subcategoryContainer4 p-2 mb-2 rounded order-2">
+              <h4 class="p-2 mb-2 rounded">Essen im Restaurant</h4>
+              <p class="p-2">Bestellen Sie nicht zu viel auf einmal oder nehmen Sie lieber mal eine kleine Portion. Wenn Sie danach immer noch Hunger haben, können Sie sich ein Dessert gönnen.</p>
+            </div>
+          </div>
+          <div class="categoryContainer d-flex flex-column p-2 mb-2 rounded order-5">
+            <h3>Milchprodukte:</h3>
+            <div class="subcategoryContainer5 p-2 mb-2 rounded order-1">
+              <p class="p-2">Kaufen Sie Milchprodukte nicht in übermässigen Mengen ein, da sie sehr schnell schlecht werde können. Es gibt jedoch Unterschiede. Nach Verfall des Ablaufdatums schauen, riechen und probieren Sie das Produkt. Wenn alles normal ist, ist es
+                noch essbar. Käse ist sehr lange haltbar, weil er vor dem Verkauf schon sehr lange gelagert wurde. Wenn es am Käse ein wenig Schimmel hat, schneiden sie den Teil weg. Der Rest kann trotzdem noch unbedenklich gegessen werden.</p>
+            </div>
+          </div>
+          <div class="categoryContainer d-flex flex-column p-2 mb-2 rounded order-6">
+            <h3>Brot:</h3>
+            <div class="subcategoryContainer6 p-2 mb-2 rounded order-1">
+              <p class="p-2">Pro Woche wird pro Person etwa ein halbes Brot (500g) weggeworfen. Brot ist aber ein sehr vielfältiges Nahrungsmittel. Wenn es nicht mehr ganz frisch ist oder schon ein wenig hart, kann man noch sehr viele Gerichte damit zubereiten oder
+                verfeinern.
+                <br>Man kann man das Brot toasten und es schmeckt wieder frisch. Croutons sind das perfekte Topping auf jeden Salat oder Suppe. Dazu schneidet man das Brot in kleine Würfel, brät diese mit ein wenig Öl an und würzt mit ein paar Kräutern
+                und Salz.<br>Es gibt noch viele andere Rezepte durch die Brot schmackhafter gemacht werden kann. Informieren Sie sich im Internet.</p>
+            </div>
+          </div>
+          <div class="categoryContainer d-flex flex-column p-2 mb-2 rounded order-7">
+            <h3>Diverses:</h3>
+            <div class="subcategoryContainer7 p-2 mb-2 rounded order-1">
+              <h4 class="p-2 mb-2 rounded">Schweizer Zucker</h4>
+              <p class="p-2">Zucker aus der Schweiz verursacht sehr viel Foodwaste, da viele Zuckerrüben aufgrund von zu niedrigem Zuckergehalt nicht verwendbar sind. Etwa 44% der Ernte wird weggeworfen. Andere Süssstoffe können sehr gute Alternativen sein, wie z.B.
+                Ahornsirup, Birnel, Honig oder Agavendicksaft.</p>
+            </div>
+            <div class="subcategoryContainer7 p-2 mb-2 rounded order-2">
+              <h4 class="p-2 mb-2 rounded">Ablaufdatum</h4>
+              <p class="p-2">Das Ablaufdatum auf Lebensmitteln ist eine minimale Frist. Der Hersteller räumt während dieser Frist das Recht auf Rückgabe ein und will dementsprechend die Frist möglichst klein halten. Das bedeutet meistens, dass die Lebensmittel nach
+                dem verstreichen dieses Datums noch essbar sind. Am besten schauen Sie die abgelaufenen Lebensmittel zuerst an, und untersucht diese auf optische Anzeichen von Ungeniessbarkeit wie z.B. Schimmel. Als zweites sollten Sie an den Lebensmitteln
+                riechen um festzustellen ob es noch gut ist oder schon verdorben riecht. Als letztes sollten Sie die Lebensmittel probieren um zu bestimmen ob es wie gewohnt schmeckt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="custom_script.js"></script>
+</body>
+
 </html>
