@@ -41,9 +41,11 @@ function sortSuggestions() {
 function getCategories() {
   var categoryArray = []
   var calculatedNumber = 0;
+  var score = 0;
   for (var i = 0; i < answers.length; i++) {
     for (var j = 0; j < answers[i].length; j++) {
       calculatedNumber += parseInt(answers[i][j]);
+      score += parseInt(answers[i][j]);
     }
     categoryArray.push(calculatedNumber);
     calculatedNumber = 0;
@@ -51,6 +53,7 @@ function getCategories() {
     var sortedSubcategory = sortWithIndeces(subcategory);
     applyNewOrder(sortedSubcategory, true, i + 1);
   }
+  document.getElementById("score").innerHTML = score+'/86 Punkten  <span class="badge badge-secondary">&empty; 49</span>';
   return categoryArray;
 }
 
