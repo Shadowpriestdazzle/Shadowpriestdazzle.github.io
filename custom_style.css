@@ -14,7 +14,7 @@ body {
 }
 
 .row {
-  padding-top: 56px;
+  padding-top: 66px;
 }
 
 .navbar-brand {
@@ -49,11 +49,11 @@ a.nav-item.nav-link {
   transition: background-color .2s ease-in-out;
 }
 
-.form-check:nth-child(even), .categoryContainer, h4.mb-2.rounded, h2.p-2.rounded {
+.form-check:nth-child(even), .categoryContainer, h4.mb-2.rounded, h2.p-2.rounded, .green {
   background-color: #155724;
 }
 
-.form-check:nth-child(odd), .subcategoryContainer1, .subcategoryContainer2, .subcategoryContainer3, .subcategoryContainer4, .subcategoryContainer5, .subcategoryContainer6, .subcategoryContainer7, p.p-2.rounded, h2, .jumbotron, footer {
+.form-check:nth-child(odd), .subcategoryContainer1, .subcategoryContainer2, .subcategoryContainer3, .subcategoryContainer4, .subcategoryContainer5, .subcategoryContainer6, .subcategoryContainer7, p.p-2.rounded, h2, .jumbotron, footer, .grey {
   background-color: #252525
 }
 
@@ -61,6 +61,7 @@ a.nav-item.nav-link {
   background-color: #ff6f00;
   cursor: pointer;
 }
+
 
 .col-sm-12 {
   padding-left: 10%;
@@ -123,4 +124,14 @@ div h3 {
   height: 8px;
   border-radius: 50%;
   background: white;
+}
+
+h4 a {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+h4 a:hover {
+  color: #ff6f00;
 }
